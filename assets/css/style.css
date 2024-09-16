@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #141517;
+    --color-primary: #8437e8;
+    --color-secondary: #e058f2;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+    background: var(--bg-primary);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ESPECIAL CLASS */
+.container {
+    max-width: 1400px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer;
+    gap: 10px;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    padding: 15px 20px;
+    clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0% 20%);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* WELCOME CONTAINER */
+.container-welcome {
+    position: relative;
+}
+
+#matrixCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.container-welcome::before {
+    content: '';
+    position: absolute;
+    transform: translate(-30%, -30%);
+    height: 30%;
+    width: 30%;
+    border-radius: 100%;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    filter: blur(400px);
+    /* opacity: .3; */
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap-reverse;
+}
+
+.welcome-info {
+    max-width: 410px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+
+.welcome-title>h1,
+h2 {
+    font-weight: 300;
+    line-height: 110%;
+    font-size: 2.5rem;
+}
+
+.welcome-text {
+    color: #E1E1E1;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.name-animation {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.welcome-img {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.welcome-img img {
+    width: 100%;
+}
+
+.img-absolut-coder {
+    position: absolute;
+    top: 50%;
+    transform: translate(40%, -30%);
+}
+
+.img-absolut-coder>.coder {
+    border-radius: 120px 20px 50px 10px;
+    width: 220px;
+    height: 410px;
+    background-color: #242529;
+    position: relative;
+}
+
+.img-absolut-coder>.coder::after {
+    position: absolute;
+    top: -45%;
+    left: 40%;
+    transform: translate(-50%, -0%);
+    content: 'CODER';
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.img-absolut-coder>.coder>img {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -0%);
+    bottom: 0;
+}
+
+.img-absolut-designer {
+    position: absolute;
+    top: 65%;
+    right: 0;
+    transform: translate(-25%, -0%);
+}
+
+.img-absolut-designer>.designer {
+    border-radius: 150px 40px 75px 50px;
+    width: 250px;
+    height: 350px;
+    background-color: #242529;
+    position: relative;
+}
+
+.img-absolut-designer>.designer::after {
+    position: absolute;
+    top: -75%;
+    left: 38%;
+    transform: translate(-50%, -0%);
+    content: 'DESIGNER';
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.img-absolut-designer>.designer>img {
+    position: absolute;
+    right: 50%;
+    transform: translate(45%, -0%);
+    bottom: 0;
+}
+
+/* CONTAINER ABOUT */
+.container-about {
+    /* background: url(../images/bg-about.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.line-for-about {
+    content: '';
+    position: absolute;
+    transform: translate(-30%, -30%);
+    height: 30%;
+    right: -25%;
+    width: 30%;
+    border-radius: 100%;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    filter: blur(300px);
+}
+
+.container-about::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg-about.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 2;
+}
+
+.about-container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    max-width: 600px;
+    width: 100%;
+}
+
+.about-img img {
+    width: 100%;
+}
+
+.about-text h1 span {
+    color: var(--color-primary);
+}
+
+.about-text h1 {
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right, var(--color-primary), transparent) 0 5 100%;
+    width: max-content;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+}
+
+.about-text p {
+    max-width: 460px;
+    color: #E1E1E1;
+    font-weight: 300;
+}
+
+.about-text span,
+.about-text b {
+    color: var(--color-primary);
+}
+
+.about-text b {
+    font-weight: 700;
+}
+
+footer {
+    text-align: center;
+    background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
+}
+
+/* RESPONSIVE */
+@media (max-width: 1240px) {
+    .welcome-img {
+        margin-bottom: 2rem;
+    }
+
+    .welcome-container {
+        flex-direction: column-reverse;
+    }
+
+    .welcome-info {
+        text-align: center;
+        align-items: center;
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .about-img {
+        max-width: 480px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .welcome-title>h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-text {
+        font-size: 1rem;
+    }
+}
